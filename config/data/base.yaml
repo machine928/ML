@@ -1,0 +1,25 @@
+datasets:
+  raw:
+    train_set:
+      directory: ./data/train.csv
+    test_set:
+      directory: ./data/test.csv
+  aggregated:
+    train_set:
+      directory: ./data/aggregated/train.csv
+    test_set:
+      directory: ./data/aggregated/test.csv
+
+data_window:
+  short_seq:
+    data_size: 90
+    pred_size: 90
+    step: 1
+  long_seq:
+    data_size: 90
+    pred_size: 365
+    step: 1
+  one_seq:
+    data_size: 90
+    pred_size: 1
+    step: 1

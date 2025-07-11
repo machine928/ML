@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - data: base
+  - model: base
+
+model_name: ada_lstm
+eval_type: long_seq
+
+device: cuda
+weight_path: ./output/weights/ada_lstm/${eval_type}/ws365_step7_ensemble/best.pth
+
+output_dir: ./output/plots/ada_lstm/${eval_type}/ws365_step7_ensemble
+

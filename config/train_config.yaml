@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - data: base
+  - model: base
+
+train_type: long_seq
+device: cuda
+model_name: ada_lstm
+seed: 42
+augment: False
+aug_prob: 0.5
+
+training_settings:
+  short_seq:
+    epoch: 1500
+    val_every_ep: 100
+    batch_size: 128
+    lr: 1e-4
+    output_dir: ./output/weights/${model_name}/${train_type}/ws90_step1_aug0.5_fs_ensemble
+  long_seq:
+    epoch: 1000
+    val_every_ep: 50
+    batch_size: 16
+    lr: 1e-4
+    output_dir: ./output/weights/${model_name}/${train_type}/ws365_step7_ensemble
+  one_seq:
+    epoch: 1000
+    val_every_ep: 100
+    batch_size: 64
+    lr: 1e-4
+    output_dir: ./output/weights/${model_name}/${train_type}/baseline
