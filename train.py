@@ -6,7 +6,6 @@ from dataset.seq_dataset import ElectricityDataset
 from models.lstm import LSTM
 from models.transformer import Transformer
 from models.model import AdaLstm
-from models.loss import *
 from models.train_wrapper import Trainer
 
 
